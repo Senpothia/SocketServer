@@ -12,7 +12,7 @@ public class Client {
 	public static void main(String[] args) {
 		
 		
-		final String HOST = "127.0.0.1";
+		final String HOST = "35.180.165.119";
 		final int port = 5725;
 		DataInputStream in;
 		DataOutputStream out;
@@ -22,10 +22,10 @@ public class Client {
 			in = new DataInputStream(sc.getInputStream());
 			out = new DataOutputStream(sc.getOutputStream());
 			
-			out.writeUTF("C:<12345678><145698>");
-			String message = in.readUTF();
+			out.writeUTF("456211");   // message envoyé
+			String message = in.readUTF();  
 			
-			System.out.println(message);
+			System.out.println(message);  // message reçu
 			
 		} catch (UnknownHostException e) {
 			// TODO Auto-generated catch block
